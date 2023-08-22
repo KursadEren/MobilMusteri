@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React,{useState} from 'react'
 import CirlcleNotification from '../Component/CirlcleNotification'
-
+import NotficationFlatList from '../Component/NotficationFlatList'
 export default function LoginScreen() {
     const [notificationState, setNotificationState] = useState(0);
 
@@ -10,21 +10,22 @@ export default function LoginScreen() {
   };
   return (
     <View style={{flex:1}}>
-      <Text>LoginScreen</Text>
+   
       <View style={{flex:0.1,justifyContent:"center",alignItems:'center'}}>
-
+        <NotficationFlatList/>
       </View>
       
-      <View style={{flex:1,justifyContent:"center",alignItems:"center"}} >
+      <View style={{flex:0.8}} >
         {notificationState === 1 ? (
            <CirlcleNotification OnChange={handleNotificationClick} NatificationText="User Page" Icon="account" />
         ) : (
             <CirlcleNotification OnChange={handleNotificationClick} NatificationText="Admin Page" Icon="account-cog"/>
         )}
       </View>
-      <View style={{flex:1,justifyContent:"center",alignItems:'center'}}>
-
+      <View style={{flex:0.1,justifyContent:"center",alignItems:'center'}}>
+        <NotficationFlatList/>
       </View>
+     
       
     </View>
   )
