@@ -39,9 +39,7 @@ const DotComponent = () => {
         style={styles.textInput}
       />
       </View>
-      <View style={{flex:0.5}}>
-     <ButtonComponent/>
-     </View>
+      
     </View>
   );
 };
@@ -53,11 +51,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   textInput: {
-    fontSize: 24,
+    width: 300,
+    height: 40,
     borderWidth: 1,
-    padding: 10,
-    width: 200,
-    textAlign: 'center',
+    borderColor: 'gray',
+    borderRadius: 5,
+    paddingHorizontal: 10,
   },
   passwordDotsContainer: {
     flexDirection: 'row',
@@ -68,7 +67,7 @@ const styles = StyleSheet.create({
     height: 20,
     borderRadius: 10, // Kareyi yuvarlak yapmak için
     borderWidth: 1,
-    borderColor: 'black',
+    borderColor: 'gray',
     backgroundColor: 'white',
     marginHorizontal: 5,
   },

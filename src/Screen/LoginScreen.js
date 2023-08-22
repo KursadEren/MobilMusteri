@@ -15,7 +15,7 @@ export default function LoginScreen() {
         <NotficationFlatList/>
       </View>
       
-      <View style={{flex:0.8}} >
+      <View style={{flex:0.8,marginTop:10}} >
         {notificationState === 1 ? (
            <CirlcleNotification OnChange={handleNotificationClick} NatificationText="User Page" Icon="account" />
         ) : (

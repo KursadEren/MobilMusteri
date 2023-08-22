@@ -1,8 +1,23 @@
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import React from 'react';
-import { IconButton } from 'react-native-paper';
+import React,{useState} from 'react';
+import { IconButton ,Button} from 'react-native-paper';
 import DotComponent from './DotComponent';
+import MyTextInput from './MyTextInput';
+import ButtonComponent from './ButtonComponent';
 export default function CircleNotification({ Icon, OnChange, NatificationText }) {
+
+  const [username, setUsername] = useState('');
+  const [showDotComponent, setShowDotComponent] = useState(false);
+
+  const handleUsernameChange = (newUsername) => {
+    setUsername(newUsername);
+  };
+
+  const handleNextPress = () => {
+    setShowDotComponent(showDotComponent == true ? false : true);
+  };
+
+
   return (
     <View style={styles.container}>
       <View style={{flex:1,flexDirection:"column",alignItems:"center"}}> 
@@ -17,7 +32,18 @@ export default function CircleNotification({ Icon, OnChange, NatificationText })
       </View>
       </View>
       <View style={{flex:1}}>
-       <DotComponent/>
+      {!showDotComponent ? (
+        <View style={{ flex: 1 }}>
+          <MyTextInput onChangeText={handleUsernameChange} value={username} />
+          <ButtonComponent title="Next" OnChange={handleNextPress} />
+        </View>
+      ) : (
+        <View style={{ flex: 1 }}>
+          <DotComponent />
+          <ButtonComponent title="Back" OnChange={handleNextPress} />
+        </View>
+      )}
+      
       </View>
       
       
