@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   square: {
     width: windowWidth / 5, // Ekran genişliğine bölerek öğeleri yatayda tam ekran kaplayacak şekilde ayarlıyoruz
     aspectRatio: 1, // Kare şeklinde öğe yapısı
-    backgroundColor: '#ed662d',
+    backgroundColor: '#FF6000',
     margin: 2,
     borderRadius:5,
   },

@@ -14,9 +14,10 @@ const MyTextInput = ({ onChangeText, value }) => {
     >
       <TextInput
         style={styles.input}
-        underlineColor="#ed662d"
-        placeholderTextColor="black"   
-      activeUnderlineColor="#ed662d"
+        textColor='#FFE6C7'
+        underlineColor="none"
+        placeholderTextColor="#FFE6C7"   
+        activeUnderlineColor="#454545"
         placeholder="Kullanıcı Adı"
         onChangeText={onChangeText}
         value={value}
@@ -31,7 +32,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   input: {
-    backgroundColor: "white",
+    backgroundColor: "#FF6000",
     width: 300,
     height: 40,
     borderRadius: 5,

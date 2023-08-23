@@ -40,9 +40,10 @@ const DotComponent = () => {
       <View style={{flex:0.8}}>
       <TextInput
       placeholder='Şifre'
-      placeholderTextColor="black"      
-      underlineColor="#ed662d"
-      activeUnderlineColor="#ed662d"
+      textColor='#FFE6C7'
+      placeholderTextColor="#FFE6C7"       
+      underlineColor="#FF6000"
+      activeUnderlineColor="#454545"
         onChangeText={handlePasswordChange}
         value={password}
         keyboardType="numeric"
@@ -51,7 +52,7 @@ const DotComponent = () => {
         secureTextEntry={!showPassword} 
         
       />
-        <HelperText style={{color:"black"}} type="info">
+        <HelperText style={{color:"#FFE6C7"}} type="info">
           Şifreniz 6 karakter uzunluğunda olmalıdır.
         </HelperText>
       
@@ -68,7 +69,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   textInput: {
-    backgroundColor: "white",
+    backgroundColor: "#FF6000",
     width: 300,
     height: 40,
     borderRadius: 5,
@@ -84,11 +85,11 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderWidth: 1,
     borderColor: '#ed662d',
-    backgroundColor: 'white',
+    backgroundColor: '#454545',
     marginHorizontal: 5,
   },
   passwordDotFilled: {
-    backgroundColor: 'black',
+    backgroundColor: '#FF6000',
   },
 });
 

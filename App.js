@@ -12,8 +12,10 @@ function MyStack() {
     <Stack.Navigator
     screenOptions={{
       headerTitleAlign: 'center',
-    headerStyle:{backgroundColor:"white"}
+      headerTintColor:"#FFE6C7",
+    headerStyle:{backgroundColor:"#454545",color:"#FFE6C7"}
   , headerShadowVisible: false,}}
+    
     >
       <Stack.Screen 
        options={{ title: 'Login Screen' , }} // Sayfa başlığı

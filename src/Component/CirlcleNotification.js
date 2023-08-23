@@ -27,7 +27,7 @@ export default function CircleNotification({ Icon, OnChange, NatificationText })
     <View style={{flex:0.5}}>
       <View style={styles.circleView}>
         <TouchableOpacity onPress={OnChange}>
-          <IconButton iconColor='black' icon={Icon} size={50} />
+          <IconButton  iconColor='#FFA559' icon={Icon} size={50} />
         </TouchableOpacity>
       </View>
       </View>
@@ -80,14 +80,15 @@ const styles = StyleSheet.create({
   notificationText: {
     textAlign: 'center',
     fontSize: 20,
+    color:"#FFE6C7"
   },
   circleView: {
     width: 100,
     height: 100,
     borderRadius: 100,
-    backgroundColor: 'white',
+    backgroundColor: '#454545',
     borderWidth: 1,
-    borderColor: '#ed662d',
+    borderColor: '#FF6000',
     justifyContent: 'center',
     alignItems: 'center',
   },
