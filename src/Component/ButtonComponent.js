@@ -4,7 +4,7 @@ import { Button } from 'react-native-paper';
 
 const ButtonComponent = ({title,OnChange}) => (
     <View style={style.ButtonContainer}>
-       <Button icon="send" mode="contained" onPress={OnChange}>
+       <Button buttonColor='#ed662d' icon="send" mode="contained" onPress={OnChange}>
         {title}
        </Button>
     </View>

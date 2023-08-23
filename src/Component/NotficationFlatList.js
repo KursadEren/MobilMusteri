@@ -16,6 +16,7 @@ const NotficationFlatList = () => {
         keyExtractor={(_, index) => index.toString()}
         horizontal
         contentContainerStyle={styles.flatListContent}
+        showsHorizontalScrollIndicator={false}
       />
     </View>
   );
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
   square: {
     width: windowWidth / 5, // Ekran genişliğine bölerek öğeleri yatayda tam ekran kaplayacak şekilde ayarlıyoruz
     aspectRatio: 1, // Kare şeklinde öğe yapısı
-    backgroundColor: 'orange',
+    backgroundColor: '#ed662d',
     margin: 2,
     borderRadius:5,
   },

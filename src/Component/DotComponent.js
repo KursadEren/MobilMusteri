@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
-import { View, TextInput, StyleSheet } from 'react-native';
-import ButtonComponent from './ButtonComponent';
+import { View,  StyleSheet, } from 'react-native';
+
+import { HelperText, TextInput   } from 'react-native-paper';
+
 const DotComponent = () => {
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   const handlePasswordChange = (newPassword) => {
     setPassword(newPassword);
@@ -32,12 +39,22 @@ const DotComponent = () => {
       </View>
       <View style={{flex:0.8}}>
       <TextInput
+      placeholder='Şifre'
+      placeholderTextColor="black"      
+      underlineColor="#ed662d"
+      activeUnderlineColor="#ed662d"
         onChangeText={handlePasswordChange}
         value={password}
         keyboardType="numeric"
         maxLength={6}
         style={styles.textInput}
+        secureTextEntry={!showPassword} 
+        
       />
+        <HelperText style={{color:"black"}} type="info">
+          Şifreniz 6 karakter uzunluğunda olmalıdır.
+        </HelperText>
+      
       </View>
       
     </View>
@@ -46,15 +63,14 @@ const DotComponent = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex:1,
-    justifyContent:"center",
+    flex: 1,
+    justifyContent: "center",
     alignItems: 'center',
   },
   textInput: {
+    backgroundColor: "white",
     width: 300,
     height: 40,
-    borderWidth: 1,
-    borderColor: 'gray',
     borderRadius: 5,
     paddingHorizontal: 10,
   },
@@ -65,9 +81,9 @@ const styles = StyleSheet.create({
   passwordDot: {
     width: 20,
     height: 20,
-    borderRadius: 10, // Kareyi yuvarlak yapmak için
+    borderRadius: 10,
     borderWidth: 1,
-    borderColor: 'gray',
+    borderColor: '#ed662d',
     backgroundColor: 'white',
     marginHorizontal: 5,
   },

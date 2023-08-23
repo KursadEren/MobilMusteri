@@ -9,13 +9,13 @@ export default function LoginScreen() {
     setNotificationState(notificationState === 0 ? 1 : 0); // 0'dan 1'e, veya 1'den 0'a geçiş yapar
   };
   return (
-    <View style={{flex:1}}>
+    <View style={{flex:1,backgroundColor:"white"}}>
    
       <View style={{flex:0.1,justifyContent:"center",alignItems:'center'}}>
         <NotficationFlatList/>
       </View>
       
-      <View style={{flex:0.8,marginTop:10}} >
+      <View style={{flex:0.8,marginTop:15}} >
         {notificationState === 1 ? (
            <CirlcleNotification OnChange={handleNotificationClick} NatificationText="User Page" Icon="account" />
         ) : (
