@@ -1,20 +1,27 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { View, FlatList, StyleSheet, Dimensions } from 'react-native';
+import { MyContext } from '../Context/Context';
 
 const DATA = Array(5).fill(null); // 5 adet öğe
 
 const SquareItem = () => (
+
+  
   <View style={styles.square} />
 );
 
 const NotficationFlatList = () => {
+
+ 
+  const context = useContext(MyContext);
+  const { Flatlistxy} = context
   return (
     <View style={styles.container}>
       <FlatList
         data={DATA}
         renderItem={() => <SquareItem />}
         keyExtractor={(_, index) => index.toString()}
-        horizontal
+        horizontal = {Flatlistxy}
         contentContainerStyle={styles.flatListContent}
         showsHorizontalScrollIndicator={false}
       />

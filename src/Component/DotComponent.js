@@ -38,23 +38,23 @@ const DotComponent = () => {
       </View>
       </View>
       <View style={{flex:0.8}}>
-      <TextInput
-      placeholder='Şifre'
-      textColor='#FFE6C7'
-      placeholderTextColor="#FFE6C7"       
-      underlineColor="#FF6000"
-      activeUnderlineColor="#454545"
-        onChangeText={handlePasswordChange}
-        value={password}
-        keyboardType="numeric"
-        maxLength={6}
-        style={styles.textInput}
-        secureTextEntry={!showPassword} 
-        
-      />
-        <HelperText style={{color:"#FFE6C7"}} type="info">
-          Şifreniz 6 karakter uzunluğunda olmalıdır.
-        </HelperText>
+          <TextInput
+            placeholder='Şifre'
+            textColor='#FFE6C7'
+            placeholderTextColor="#FFE6C7"       
+            underlineColor="#FF6000"
+            activeUnderlineColor="#454545"
+            onChangeText={handlePasswordChange}
+            value={password}
+            keyboardType="numeric"
+            maxLength={6}
+            style={styles.textInput}
+            secureTextEntry={!showPassword} 
+            
+          />
+          <HelperText style={{color:"#FFE6C7"}} type="info">
+            Şifreniz 6 karakter uzunluğunda olmalıdır.
+          </HelperText>
       
       </View>
       

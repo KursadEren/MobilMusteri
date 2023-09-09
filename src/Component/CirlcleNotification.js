@@ -4,7 +4,7 @@ import { IconButton ,Button} from 'react-native-paper';
 import DotComponent from './DotComponent';
 import MyTextInput from './MyTextInput';
 import ButtonComponent from './ButtonComponent';
-export default function CircleNotification({ Icon, OnChange, NatificationText }) {
+export default function CircleNotification({ Icon, OnChange, NatificationText,navigation }) {
 
   const [username, setUsername] = useState('');
   const [showDotComponent, setShowDotComponent] = useState(false);
@@ -17,6 +17,9 @@ export default function CircleNotification({ Icon, OnChange, NatificationText })
     setShowDotComponent(showDotComponent == true ? false : true);
   };
 
+  const HandleLogin = () =>{
+    navigation.navigate("MyTabs");
+  }
 
   return (
     <View style={styles.container}>
@@ -52,7 +55,7 @@ export default function CircleNotification({ Icon, OnChange, NatificationText })
             </View>
         
           <View >
-              <ButtonComponent title="Login" OnChange={handleNextPress} />
+              <ButtonComponent title="Login" OnChange={HandleLogin} />
           </View>
           </View>
         </View>
