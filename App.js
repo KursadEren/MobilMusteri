@@ -3,7 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from "@react-navigation/native";
 import LoginScreen from "./src/Screen/LoginScreen";
 import HomeScreen from "./src/Screen/HomeScreen"
-import AdminLoginScreen from "./src/Screen/AdminLoginScreen";
+import AdminTaskScreen from "./src/Screen/AdminTaskScreen";
 import { PaperProvider } from 'react-native-paper';
 import  { MyContextProvider } from './src/Context/Context';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -27,7 +27,7 @@ function MyStack() {
       <Stack.Screen 
        options={{ title: 'Login Screen' , }} // Sayfa başlığı
        name="LoginScreen" component={LoginScreen} />
-      <Stack.Screen name="AdminLoginScreen" component={AdminLoginScreen} />
+      <Stack.Screen name="AdminTaskScreen" component={AdminTaskScreen} />
       
       <Stack.Screen name="MyTabs" component={MyTabs} />
      
@@ -56,9 +56,7 @@ function MyTabs() {
 
           if (route.name === 'Home') {
             iconName = 'home'; // İkon adını değiştirin
-          } else if (route.name === 'AdminLoginScreen') {
-            iconName = 'account-circle'; // İkon adını değiştirin
-          }
+          } 
           else if (route.name==="Tasks")iconName = 'format-list-bulleted'
 
           // İkonları döndürün
@@ -70,7 +68,7 @@ function MyTabs() {
         inactiveTintColor: '#454545',
       }}
     >
-      
+      <Tab.Screen name="AdminTaskScreen" component={AdminTaskScreen} />
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Tasks" component={Tasks} />
       
